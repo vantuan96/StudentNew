@@ -28,19 +28,119 @@
     <!--<script src="js/functions.js"></script>-->
     <script>
         $(document).ready(function () {
-            var swiper = new Swiper('.swiper-container ', {
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                paginationClickable: true,
-                spaceBetween: 50,
-                centeredSlides: true,
-                autoplay: 5000,
-                autoplayDisableOnInteraction: false
+            $('.of-search').click(function () {
+                $('.of-searchbox').show(200);
+
             });
-        });
+            $('.of-closesearch').click(function () {
+                $('.of-searchbox').hide(200);
+            });
+            $('.of-iconmntop ').click(function () {
+                $('.of-menutop').toggleClass('of-mnshow');
+            });
+            $('.bnt-1').click(function () {
+                $('html,body').animate({ scrollTop: $('.content-2').offset().top - 20 }, 2000);
+            });
+            $('.bnt-2').click(function () {
+                $('html,body').animate({ scrollTop: $('.content-3').offset().top - 10 }, 2000);
+            })
+            $('.bnt-3 ').click(function () {
+                $('html,body').animate({ scrollTop: $('.content-4').offset().top - 10 }, 2000);
+            })
+        })
     </script>
 </head>
 <body>
+    <div class="of-header">
+        <div class="container">
+            <a href="http://fptshop.com.vn/" title="Fptshop.com.vn">
+                <img class="of-logo" src="images/logo.png"
+                     alt="Fptshop.com.vn">
+            </a>
+
+            <span class="of-iconmntop"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
+            <ul class="of-menutop  ">
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/dien-thoai" title="">
+                        <i class="of-imobile"></i> <span>Điện thoại</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/may-tinh-bang" title="">
+                        <i class="of-itablet"></i>
+                        <span>Tablet</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/apple" title="">
+                        <i class="of-iapple"></i>
+                        <span>Apple</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/may-tinh-xach-tay" title="">
+                        <i class="of-ilaptop"></i>
+                        <span>Laptop</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/smartwatch/apple-watch" title="">
+                        <i class="of-iswatch"></i> <span>SmartWatch</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/phu-kien" title="">
+                        <i class="of-ipkien"></i> <span>Phụ kiện</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/may-doi-tra" title="">
+                        <i class="of-imdt"></i> <span>Máy đổi trả</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/xa-hang" title="">
+                        <i class="of-ixahang"></i> <span>Xả hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/khuyen-mai" title="">
+                        <i class="of-ikmai"></i> <span>Khuyến mãi</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://fptshop.com.vn/tin-tuc" title="">
+                        <i class="of-itinhay"></i> <span>Tin hay</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="of-search">
+                <i class="of-isearch"></i> <span>Tìm kiếm</span>
+            </div>
+
+            <div class="of-call">
+                <a href="tel:18006601">
+                    <span>Tư vấn miễn phí</span>
+                    <p><i class="glyphicon glyphicon-earphone"></i>1800 6601</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="of-searchbox">
+        <div class="of-searchbar">
+            <div class="container">
+                <a href="" title=""><img class="of-slogo" src="images/logo-mb.png" alt=""></a>
+                <div class="of-ipsearch input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Tìm kiếm Fptshop.com.vn">
+                </div>
+                <span class="of-closesearch">&#x2715;</span>
+            </div>
+        </div>
+    </div>
     <div class="content-1">
         <div class="container">
             <div class="info">
@@ -159,8 +259,8 @@
                 <table class="table ">
                     <thead style="background-color : #026eab ; color :white">
                         <tr>
-                            <th >Số báo danh</th>
-                            <th >Họ và Tên</th>
+                            <th>Số báo danh</th>
+                            <th>Họ và Tên</th>
                             <th>Toán</th>
                             <th>Ngoại ngữ</th>
                             <th>Ngữ Văn</th>
@@ -180,7 +280,7 @@
                             <td style="background-color:white; ">4,5</td>
                             <td>6,5	</td>
                             <td style="background-color:white; ">4,5</td>
-                            <td style="color:red ;font-weight: 700" >
+                            <td style="color:red ;font-weight: 700">
                                 40,5
                             </td>
                         </tr>
@@ -208,7 +308,7 @@
                         <p style="font-size:22px ;color: black ">
                             Trả góp
                             trả trước <strong style="color:red">0đ </strong> hoặc <strong style="color:red">0%</strong> lãi suất
-</p>
+                        </p>
                     </a>
                 </li>
                 <li>
@@ -223,8 +323,8 @@
             <div class="note">
                 <h3 style="font-size: 14px ; padding: 0 0 15px 0"><strong>(*) Quý khách lưu ý về việc sử dụng Voucher:</strong></h3>
                 <ul class="list-note">
-                    <li >
-                      
+                    <li>
+
                         <p>
                             <span></span>
                             Voucher chỉ áp dụng cho sản phẩm <strong>Laptop</strong>  từ <strong>5 triệu trở lên</strong>
@@ -264,7 +364,7 @@
                     <li><a>Máy tính bảng</a></li>
 
                 </ul>
-              
+
                 <div class="sv-prod-tab-sear">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
@@ -276,28 +376,370 @@
                     </div>
                 </div>
             </div>
-            <div class="lst-ads" data-id="1">
-                <div class="sub-list">
-                        <span class="icon">
-                            <i>-49%</i>
-                        </span>
-                    <div class="hinh-anh"></div>
-                    <div class="txt-5">
-                        <a href="#">Samsung Galaxy S6</a>>
-                        <p>Giá : <span style="text-decoration:line-through">18.000.000đ <strong>16.000.000đ</strong></span></p>
-                        <p>Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+            <div class="ds-1">
+                <div class="col-md-3">
+                    <div class="lst-ads">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6" style="text-decoration:none">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
 
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-bnn">
-                       
-                            <button type="button" class="bt-1">Đặt ngay    </button> 
-                            <a href="javascript:;">Xem nhanh
-
+                </div>
+                <!--<div class="show-view show-1">
+                    <div class="container-1">
+                        <span class="close">✕</span>
+                        <div class="img-2">
+                            <a href="#">
+                                <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" />
                             </a>
+                        </div>
+                        <div class="part-2">
+                            <div class="title-2">
+                                <h3>iPhone 6 Plus 64GB</h3>
+
+                                <h3 class="txt-7">
+                                    iPhone 6 Plus 64GB
+                                </h3>
+                                <p style="margin-bottom : 8px"> <span style="font-size:14px">Giá: </span><strong style="color:red ; font-size:20px">20.000.000đ</strong></p>
+                                <div class="part-3">
+
+                                <p style="font-size:14px">Bảo hành: 1 năm 1 đổi 1</p>
+                                <span class="txt-8">Màu sắc</span>
+                                <ul class="lst-ul">
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="v1" value="1" checked="checked" />
+                                            <span style="background: #d8c2ad"></span>
+
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="v1" value="2" />
+                                            <span style="background: #f4cdcd;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="v1" value="3" />
+                                            <span style="background: #dfdfdf"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="v1" value="4" />
+                                            <span style="background: #bababa"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                    <div class="btn-bnn-1">
+
+                                <a class="lst-a-1 hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a  style="text-decoration:none   " class="view-fast-1  hvr-shadow ">
+                                    Xem chi tiết
+
+                                </a>
+                            </div>
+                                </div>
+                            </div>
+                            <div class="txt-9">
+                                <span >
+                                    <strong style="color:red; font-size:14px">Khuyến mãi:</strong>
+                                </span>
+                                <p class="txt-10">- Bảo hành 1 đổi 1 trong vòng 12 tháng</p>
+                                <p class="txt-10">- Trả góp 0% Home Credit (PPF), trả trước 30%, kỳ hạn 6 tháng (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm BH)</p>
+                                <p class="txt-10">- Trả góp 0% ANZ/HSBC (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm Bảo Hành)</p>
+                                <p class="txt-10">- Tặng 50% gói Bảo Hành Vàng</p>
+                            </div>
+                            <div class="txt-11">
+                                <strong style="font-size:14px">Thông số cơ bản:</strong>
+                                <ul class="detail">
+                                    <li>
+                                        <p class="test">Kiểu điện thoại :</p>
+                                        <p>Thanh (thẳng) + Cảm ứng</p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Màn hình :	</p>
+                                        <p>	4.7 inch (1334 x 750 pixels)</p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Camera :	</p>
+                                        <p>
+                                            Chính: 12.0MP, Phụ: 5.0 MP
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Bộ nhớ trong :	</p>
+                                        <p>
+                                            16 GB
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Hệ điều hành :	</p>
+                                        <p>
+                                            iOS 9
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Chipset :	</p>
+                                        <p>
+                                            A9
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="test">Kích thước :</p>
+                                        <p>
+                                            38.3 x 67.1 x 7.1 mm
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-2">
+                <div class="col-md-3">
+                    <div class="lst-ads">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6" style="text-decoration:none">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lst-ads" data-id="1">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
+
+                            </div>
+                            <div class="btn-bnn">
+
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
+
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+    <footer class="of-footer">
+        <div class="container">
+            <div class="of-footer-link">
+                <a target="_blank" href="http://fptshop.com.vn/huong-dan/huong-dan-mua-hang" title="Hướng dẫn mua hàng">
+                    Hướng
+                    dẫn mua hàng
+                </a> |
+                <a target="_blank" href="http://fptshop.com.vn/ho-tro/chinh-sach-tra-gop" title="Trả góp">Trả góp</a> |
+                <a target="_blank" href="http://fptshop.com.vn/ho-tro/chinh-sach-bao-hanh" title="Chính sách bảo hành">
+                    Chính
+                    sách bảo hành
+                </a>
+            </div>
+            <p>Công Ty Cổ Phần Bán Lẻ Kỹ Thuật Số FPT - 261 Khánh Hội, P5, Q4, TP. Hồ Chí Minh.</p>
+            <p>Điện thoại: 08.73023456. Fax: 08.39435773. Email: cskh@fptshop.com.vn</p>
+        </div>
+    </footer>
 </body>
 </html>
