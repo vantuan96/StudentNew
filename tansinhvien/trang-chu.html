@@ -46,7 +46,35 @@
             })
             $('.bnt-3 ').click(function () {
                 $('html,body').animate({ scrollTop: $('.content-4').offset().top - 10 }, 2000);
-            })
+            });
+            $('.view-fast ').click(function () {
+                $('.show-view ').show(function () {
+                    $('html,body').animate({ scrollTop: $('.show-view ').offset().top - 20 }, 2000)
+                });
+            });
+            $('.close').click(function () {
+                $('.show-view ').hide(3000);
+            });
+            //tháy đôi ảnh
+            //$('input[type=radio][name=color]').change(function () {
+            //    if (this.va)
+            //});
+            $(document).on('change', 'input[type=radio][name=color]', function (event) {
+                switch ($(this).val()) {
+                    case 'red':
+                        $('.change-img img').attr('src', 'images/iphone7-red.jpg');
+                        break;
+                    case 'vang':
+                        $('.change-img img').attr('src', 'images/iphone-6-gold.jpg');
+                        break
+                    case 'xam':
+                        $('.change-img img').attr('src', 'images/iphone-7-gray.jpg');
+                        break;
+                    case 'den':
+                        $('.change-img img').attr('src','images/iphone-7-black.jpg');
+                        break;
+                }
+            });
         })
     </script>
 </head>
@@ -180,10 +208,10 @@
                 <li class="mt-liitem ">
                     <div class="list-1">
                         <a href="#">
-                            <img src="C:\Users\Pu\Documents\StudentNew\tansinhvien\images\img-s2-4.png" alt="Alternate Text" />
+                            <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\img-s2-4.png" alt="Alternate Text" />
 
                         </a>
-                        <div></div>>
+                        <div></div>
                     </div>
                     <div class="txt-2">
                         <p> Tra cứu điểm thi đại học</p>
@@ -195,7 +223,7 @@
                 <li class="mt-liitem ">
                     <div class="list-1">
                         <a href="#">
-                            <img src="C:\Users\Pu\Documents\StudentNew\tansinhvien\images\img-s2-5.png" alt="Alternate Text" />
+                            <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\img-s2-5.png" alt="Alternate Text" />
 
                         </a>
 
@@ -210,7 +238,7 @@
                 <li class="mt-liitem ">
                     <div class="list-1">
                         <a href="#">
-                            <img src="C:\Users\Pu\Documents\StudentNew\tansinhvien\images\img-s2-6.png" alt="Alternate Text" />
+                            <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\img-s2-6.png" alt="Alternate Text" />
 
                         </a>
 
@@ -377,7 +405,7 @@
                 </div>
             </div>
             <div class="ds-1">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads">
                         <div class="sub-list">
                             <span class="icon">
@@ -405,124 +433,36 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="show-view show-1">
-                    <div class="container-1">
-                        <span class="close">✕</span>
-                        <div class="img-2">
-                            <a href="#">
-                                <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" />
-                            </a>
-                        </div>
-                        <div class="part-2">
-                            <div class="title-2">
-                                <h3>iPhone 6 Plus 64GB</h3>
 
-                                <h3 class="txt-7">
-                                    iPhone 6 Plus 64GB
-                                </h3>
-                                <p style="margin-bottom : 8px"> <span style="font-size:14px">Giá: </span><strong style="color:red ; font-size:20px">20.000.000đ</strong></p>
-                                <div class="part-3">
+                <div class="col-md-3 col-sm-6  ">
+                    <div class="lst-ads">
+                        <div class="sub-list">
+                            <span class="icon">
+                                <i>-49%</i>
+                            </span>
+                            <div class="hinh-anh">
+                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
+                            </div>
+                            <div class="txt-5">
+                                <a href="#" class="txt-6">
+                                    <h3>Samsung Galaxy S6</h3>
+                                </a>
+                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
+                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
 
-                                <p style="font-size:14px">Bảo hành: 1 năm 1 đổi 1</p>
-                                <span class="txt-8">Màu sắc</span>
-                                <ul class="lst-ul">
-                                    <li>
-                                        <label>
+                            </div>
+                            <div class="btn-bnn">
 
-                                            <input type="radio" name="v1" value="1" checked="checked" />
-                                            <span style="background: #d8c2ad"></span>
-
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-
-                                            <input type="radio" name="v1" value="2" />
-                                            <span style="background: #f4cdcd;"></span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-
-                                            <input type="radio" name="v1" value="3" />
-                                            <span style="background: #dfdfdf"></span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-
-                                            <input type="radio" name="v1" value="4" />
-                                            <span style="background: #bababa"></span>
-                                        </label>
-                                    </li>
-                                </ul>
-                                    <div class="btn-bnn-1">
-
-                                <a class="lst-a-1 hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
-                                <a  style="text-decoration:none   " class="view-fast-1  hvr-shadow ">
-                                    Xem chi tiết
+                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
+                                    Xem nhanh
 
                                 </a>
                             </div>
-                                </div>
-                            </div>
-                            <div class="txt-9">
-                                <span >
-                                    <strong style="color:red; font-size:14px">Khuyến mãi:</strong>
-                                </span>
-                                <p class="txt-10">- Bảo hành 1 đổi 1 trong vòng 12 tháng</p>
-                                <p class="txt-10">- Trả góp 0% Home Credit (PPF), trả trước 30%, kỳ hạn 6 tháng (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm BH)</p>
-                                <p class="txt-10">- Trả góp 0% ANZ/HSBC (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm Bảo Hành)</p>
-                                <p class="txt-10">- Tặng 50% gói Bảo Hành Vàng</p>
-                            </div>
-                            <div class="txt-11">
-                                <strong style="font-size:14px">Thông số cơ bản:</strong>
-                                <ul class="detail">
-                                    <li>
-                                        <p class="test">Kiểu điện thoại :</p>
-                                        <p>Thanh (thẳng) + Cảm ứng</p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Màn hình :	</p>
-                                        <p>	4.7 inch (1334 x 750 pixels)</p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Camera :	</p>
-                                        <p>
-                                            Chính: 12.0MP, Phụ: 5.0 MP
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Bộ nhớ trong :	</p>
-                                        <p>
-                                            16 GB
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Hệ điều hành :	</p>
-                                        <p>
-                                            iOS 9
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Chipset :	</p>
-                                        <p>
-                                            A9
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p class="test">Kích thước :</p>
-                                        <p>
-                                            38.3 x 67.1 x 7.1 mm
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
-                </div>-->
-
-                <div class="col-md-3">
+                </div>
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads" data-id="1">
                         <div class="sub-list">
                             <span class="icon">
@@ -550,35 +490,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="lst-ads" data-id="1">
-                        <div class="sub-list">
-                            <span class="icon">
-                                <i>-49%</i>
-                            </span>
-                            <div class="hinh-anh">
-                                <a href="#"><img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\635841484906948973_neo-7-1o.jpg" alt="Alternate Text" /></a>
-                            </div>
-                            <div class="txt-5">
-                                <a href="#" class="txt-6">
-                                    <h3>Samsung Galaxy S6</h3>
-                                </a>
-                                <p class="txt-price">Giá : <span style="text-decoration:line-through;color:#a3a3a3">18.000.000đ </span><strong style="color:red">16.000.000đ</strong></p>
-                                <p class="txt-bonus">Tặng 50% bảo hành vàng (vào nước, rơi vỡ vẫn đổi mới)</p>
-
-                            </div>
-                            <div class="btn-bnn">
-
-                                <a class="lst-a hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
-                                <a href="javascript:;" style="text-decoration:none   " class="view-fast  hvr-shadow ">
-                                    Xem nhanh
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads" data-id="1">
                         <div class="sub-list">
                             <span class="icon">
@@ -607,8 +519,9 @@
                     </div>
                 </div>
             </div>
+           
             <div class="ds-2">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads">
                         <div class="sub-list">
                             <span class="icon">
@@ -636,7 +549,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads" data-id="1">
                         <div class="sub-list">
                             <span class="icon">
@@ -664,7 +578,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads" data-id="1">
                         <div class="sub-list">
                             <span class="icon">
@@ -692,7 +606,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 ">
                     <div class="lst-ads" data-id="1">
                         <div class="sub-list">
                             <span class="icon">
@@ -717,6 +631,122 @@
 
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-view show-1">
+                <div class="container-1">
+                    <span class="close">✕</span>
+                    <div class="img-2">
+                        <a href="#" class="change-img">
+                            <img src="C:\Users\ADMIN\Documents\StudentNew\tansinhvien\images\iphone7-red.jpg" alt="Alternate Text" />
+                        </a>
+                    </div>
+                    <div class="part-2">
+                        <div class="title-2">
+                            <h3>iPhone 6 Plus 64GB</h3>
+
+                            <h3 class="txt-7">
+                                iPhone 6 Plus 64GB
+                            </h3>
+                            <p style="margin-bottom : 8px"> <span style="font-size:14px">Giá: </span><strong style="color:red ; font-size:20px">20.000.000đ</strong></p>
+                            <div class="part-3">
+
+                                <p style="font-size:14px">Bảo hành: 1 năm 1 đổi 1</p>
+                                <span class="txt-8">Màu sắc</span>
+                                <ul class="lst-ul">
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="color" value="red" checked="checked" />
+                                            <span style="background: red"></span>
+
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="color" value="vang" />
+                                            <span style="background: #ffd800;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="color" value="xam" />
+                                            <span style="background: #808080"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+
+                                            <input type="radio" name="color" value="den" />
+                                            <span style="background: black"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="btn-bnn-1">
+
+                                    <a class="lst-a-1 hvr-shadow" href="#" style="text-decoration:none   ">Đặt ngay   </a>
+                                    <a style="text-decoration:none   " class="view-fast-1  hvr-shadow ">
+                                        Xem chi tiết
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txt-9">
+                            <span>
+                                <strong style="color:red; font-size:14px">Khuyến mãi:</strong>
+                            </span>
+                            <p class="txt-10">- Bảo hành 1 đổi 1 trong vòng 12 tháng</p>
+                            <p class="txt-10">- Trả góp 0% Home Credit (PPF), trả trước 30%, kỳ hạn 6 tháng (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm BH)</p>
+                            <p class="txt-10">- Trả góp 0% ANZ/HSBC (không áp dụng đồng thời Khuyến Mãi pre-order 2 năm Bảo Hành)</p>
+                            <p class="txt-10">- Tặng 50% gói Bảo Hành Vàng</p>
+                        </div>
+                        <div class="txt-11">
+                            <strong style="font-size:14px">Thông số cơ bản:</strong>
+                            <ul class="detail">
+                                <li>
+                                    <p class="test">Kiểu điện thoại :</p>
+                                    <p>Thanh (thẳng) + Cảm ứng</p>
+                                </li>
+                                <li>
+                                    <p class="test">Màn hình :	</p>
+                                    <p>	4.7 inch (1334 x 750 pixels)</p>
+                                </li>
+                                <li>
+                                    <p class="test">Camera :	</p>
+                                    <p>
+                                        Chính: 12.0MP, Phụ: 5.0 MP
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="test">Bộ nhớ trong :	</p>
+                                    <p>
+                                        16 GB
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="test">Hệ điều hành :	</p>
+                                    <p>
+                                        iOS 9
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="test">Chipset :	</p>
+                                    <p>
+                                        A9
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="test">Kích thước :</p>
+                                    <p>
+                                        38.3 x 67.1 x 7.1 mm
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

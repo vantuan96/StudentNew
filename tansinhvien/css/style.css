@@ -798,53 +798,76 @@ ul.img-list {
 
 .sub-list {
     background-color: white;
-    height: 396px
+    height: 415px
 }
 
 .icon {
+    position: absolute;
     margin-top: 10px;
     background: #f14f42;
     height: 28px;
     float: right;
+    right: 15px;
+    white-space: nowrap;
     display: inline-block;
-    line-height: 30px;
+    line-height: 28px;
 }
 
     .icon i {
+        /*     position: relative;
         color: white;
         font-style: normal;
         font-size: 14px;
         padding: 0 5px 0 0;
-        display: inline-block;
+        display: block;*/
+        position: relative;
+        font-style: normal;
+        display: block;
+        color: #FFFFFF;
+        font-size: 14px;
+        padding: 0 5px 0 0;
     }
 
-        .icon i::before {
-            content: "";
+        .icon i:before {
+            /*content: "";
             position: absolute;
             left: 237px;
+            display: inline-block;
             width: 0;
             height: 0;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-right: 10px solid #f14f42;*/
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
             border-top: 14px solid transparent;
             border-bottom: 14px solid transparent;
             border-right: 10px solid #f14f42;
         }
 
 .hinh-anh {
+     display: block; 
+    padding-top: 15px;
     text-align: center;
-    padding: 20px 10px 15px 0;
+    height: 220px;
 }
 
 .txt-5 {
     padding: 0 15px;
 }
-
-.txt-6 h3 {
-    padding-bottom: 10px;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    display: table-cell;
+.txt-6 {
+    margin-top : 15px;
+     display: block; 
+    height: 24px;
+    margin-bottom: 5px;
+    overflow: hidden;
 }
+    .txt-6 h3 {
+        display: table;
+        width: 100%;
+    }
 
 .txt-price {
     padding-bottom: 5px;
@@ -852,12 +875,12 @@ ul.img-list {
 }
 
 .txt-bonus {
-    font-size: 14px
+    font-size: 13px
 }
 
 .btn-bnn {
     text-align: center;
-    padding-top: 10px;
+    margin: 15px 0;
 }
 
 a {
@@ -884,20 +907,19 @@ a {
 
 
 .ds-1 {
-   
-    height: 56%
+height :430px;
 }
-
-.show-view {
-    width: 100%;
-    padding: 0 15px;
-    display: none;
-    margin-bottom: 15px;
-}
+    
+    .show-view {
+        width: 100%;
+        padding: 0 15px;
+        display: none;
+        margin-bottom: 15px;
+    }
 
 .show-1 {
     padding-top: 20px;
-    display: block;
+    
     overflow: hidden
 }
 
@@ -973,9 +995,9 @@ span.close {
             display: none;
         }
 
-            .lst-ul li label input :checked ~ span {
-                border: 1px solid #026eab;
-            }
+    .lst-ul li input:checked ~ span {
+        border: 1px solid #026eab;
+    }
 
 .btn-bnn-1 {
    padding-left : 30px;
@@ -1079,11 +1101,13 @@ span.close {
             }
             .of-menutop li a:hover {
                 background-color: #f3f3f3;
+               
             }
-.of-imobile {
-    width: 15px;
-    background-position: -3px 0;
-}
+       
+                .of-imobile {
+                    width: 15px;
+                    background-position: -3px 0;
+                }
 /*.of-menutop li.active a .of-imobile,
 .of-menutop li a:hover .of-imobile {
     background-position: -3px -32px;
@@ -1235,7 +1259,9 @@ span.close {
     .of-mnshow {
         display: block !important;
     }
- 
+    /*.edit-1 {
+        width: 33.33%;
+    }*/
 
 
     .of-logo {
@@ -1319,7 +1345,9 @@ span.close {
     .of-menutop li {
         width: 20%;
     }
-
+    /*.edit-1 {
+        width: 33.33%;
+    }*/
         .of-search:after {
             content: " ";
             height: 30px;
@@ -1364,6 +1392,15 @@ span.close {
     }
 }
 @media (max-width: 1200px) {
+    .lst-a, .lst-a:hover, .lst-a:focus {
+        padding: 3px 10px;
+        margin-left : 7px;
+        text-align:center
+    }
+  
+    .view-fast, .view-fast:hover {
+        padding: 3px 4px;
+    }
     .of-logo {
         top: 16px;
         width: 120px;
@@ -1386,7 +1423,9 @@ span.close {
     .of-ipsearch {
         margin-left: 0;
     }
-
+    .col-sm-6 {
+        width: 100%;
+    }
     .of-probox-img,
     .of-probox-info {
         width: 100%;
@@ -1410,6 +1449,12 @@ span.close {
 @media (max-width: 768px) {
     .of-mnshow {
         display: block;
+    }
+    .edit-1{
+        width: 50%;
+    }
+    .edit-1 {
+        padding: 0 6px;
     }
 }
     .of-header .container {
